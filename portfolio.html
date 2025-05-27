@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Ozodbek Bakhromov | Portfolio</title>
+
+  <!-- ICON LIBRARY -->
+  <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+
+
+<main class="main">
+
+  <!-- Home Section -->
+  <section class="home" id="home">
+    <div class="home__container container grid">
+      <div class="home__content">
+        <span class="home__subtitle">Welcome To My World</span>
+        <h1 class="home__title">
+          Hi, I'm Ozodbek Bakhromov, <span>Cyber Security Specialist</span>
+        </h1>
+      </div>
+      <img src="image/photo_2025-05-10_16-51-20.jpg" alt="Ozodbek Bakhromov" class="home__img" />
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about section" id="about">
+    <div class="about__container container grid">
+      <div class="about__content">
+        <h2 class="section__title">About Me</h2>
+        <p class="about__description">
+          Cybersecurity and System Administration specialist with strong knowledge of
+          network infrastructure, system monitoring, and scripting.
+        </p>
+
+        <div class="tabs__btns">
+          <span class="tabs__btn tab__active" data-tab="skills">Main Skills</span>
+          <span class="tabs__btn" data-tab="awards">Awards</span>
+          <span class="tabs__btn" data-tab="experience">Experience</span>
+          <span class="tabs__btn" data-tab="education">Education</span>
+        </div>
+
+        <div class="tabs__content">
+          <div class="tabs__item tab__active" id="skills">
+            <div class="tabs__data grid">
+              <p class="tabs__description"><span>Pentester</span></p>
+              <p class="tabs__description"><span>Software Engineer</span></p>
+              <p class="tabs__description"><span>Python Developer</span></p>
+            </div>
+          </div>
+          <div class="tabs__item" id="awards">
+            <div class="tabs__data grid">
+              <p class="tabs__description"><span>CTF Uzbekistan</span> – 1st Place <span>2024</span></p>
+              <p class="tabs__description"><span>CyberSec Summit</span> – Best Talk <span>2022</span></p>
+            </div>
+          </div>
+          <div class="tabs__item" id="experience">
+            <div class="tabs__data grid">
+              <p class="tabs__description"><span>Freelance Pentester</span> – 2023 - Present</p>
+              <p class="tabs__description"><span>Python Developer</span> – 2023 - Present</p>
+              <p class="tabs__description"><span>System Admin Intern</span> – 2024 - 2025</p>
+            </div>
+          </div>
+          <div class="tabs__item" id="education">
+            <div class="tabs__data grid">
+              <p class="tabs__description"><span>BSc in Computer Science</span> – TUIT, 2025 - 2026</p>
+              <p class="tabs__description"><span>Cybersecurity Bootcamp</span> – 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="about section" id="portfolio">
+    <div class="about__container container">
+      <div class="about__content">
+        <h2 class="section__title">My Projects</h2>
+        <div class="grid portfolio__cards">
+          <div class="card">
+            <h3>🔒 Vulnerability Scanner</h3>
+            <p>Python va Nmap yordamida tarmoq zaifliklarini aniqlash.</p>
+          </div>
+          <div class="card">
+            <h3>📱 Secure Chat App</h3>
+            <p>Flask va Socket.IO orqali maxfiy yozishma platformasi.</p>
+          </div>
+          <div class="card">
+            <h3>🛠 Server Monitor</h3>
+            <p>Bash va Python orqali tizim monitoringi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="about section" id="contact">
+    <div class="about__container container">
+      <div class="about__content">
+        <h2 class="section__title">Contact Me</h2>
+        <form id="contact-form" action="https://formspree.io/f/YOUR_ID" method="POST" class="contact__form">
+          <div class="grid">
+            <input type="text" name="name" placeholder="Your Name" required class="button" />
+            <input type="email" name="email" placeholder="Your Email" required class="button" />
+            <textarea name="message" rows="5" placeholder="Your Message" required class="button"></textarea>
+            <button type="submit" class="button">Send Message</button>
+            <p id="form-status"></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+<header class="header">
+  <nav class="nav container">
+    <div class="nav__links">
+      <a href="#skills" class="nav__link">Skills</a>
+      <a href="#portfolio" class="nav__link">Projects</a>
+      <a href="#contact" class="nav__link">Contact</a>
+    </div>
+    <div class="nav__socials">
+      <a href="https://instagram.com/bakhromovv77" target="_blank" rel="noopener" class="nav__icon"><i class="uil uil-instagram"></i></a>
+      <a href="https://linkedin.com/in/Ozodbek-Bakhromov" target="_blank" rel="noopener" class="nav__icon"><i class="uil uil-linkedin-alt"></i></a>
+      <a href="https://t.me/BakhromovV77" target="_blank" rel="noopener" class="nav__icon"><i class="uil uil-telegram-alt"></i></a>
+    </div>
+  </nav>
+</header>
+<script>
+    // Navbar linklar va bo‘limlar
+const navLinks = document.querySelectorAll('.nav__link');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    // Smooth scroll
+    const targetId = link.getAttribute('href').slice(1);
+    const targetSection = document.getElementById(targetId);
+
+    targetSection.scrollIntoView({
+      behavior: 'smooth'
+    });
+
+    // Aktiv class qo‘shish
+    navLinks.forEach(l => l.classList.remove('active-link'));
+    link.classList.add('active-link');
+  });
+});
+
+// Scroll bo‘yicha ham aktiv linkni o‘zgartirish (optional)
+window.addEventListener('scroll', () => {
+  let scrollY = window.pageYOffset;
+
+  navLinks.forEach(link => {
+    const section = document.querySelector(link.getAttribute('href'));
+    if (section.offsetTop <= scrollY + 100 && section.offsetTop + section.offsetHeight > scrollY + 100) {
+      navLinks.forEach(l => l.classList.remove('active-link'));
+      link.classList.add('active-link');
+    }
+  });
+});
+
+</script>
+
+<!-- Tabs Switching Script -->
+<script>
+  const tabs = document.querySelectorAll('.tabs__btn');
+  const contents = document.querySelectorAll('.tabs__item');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(btn => btn.classList.remove('tab__active'));
+      tab.classList.add('tab__active');
+      contents.forEach(content => {
+        content.classList.remove('tab__active');
+        if (content.id === tab.dataset.tab) {
+          content.classList.add('tab__active');
+        }
+      });
+    });
+  });
+</script>
+
+<!-- Preloader Script -->
+<script>
+  window.addEventListener("load", () => {
+    document.getElementById("loader").style.display = "none";
+  });
+</script>
+
+<!-- Theme Toggle Script -->
+<script>
+  const toggle = document.getElementById("theme-toggle");
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+  });
+</script>
+
+<!-- Contact Form Script -->
+<script>
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      status.textContent = "Message sent successfully!";
+      form.reset();
+    } else {
+      status.textContent = "There was an error. Please try again.";
+    }
+  });
+</script>
+
+</body>
+</html>
